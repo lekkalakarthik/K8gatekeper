@@ -14,3 +14,13 @@ patches:
       - op: replace
         path: /spec/replicas
         value: 6
+      - op: add
+        path: /metadata/annotations
+        value: 
+          kubernetes.io/change-cause: "Updated deployment to 6 replicas"
+      - op: replace
+        path: /spec/template/metadata/labels/app
+        value: web-app2     
+      
+
+        
